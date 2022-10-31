@@ -6,7 +6,8 @@
 
 body{
   min-height:100vh;
-  padding:10%;
+  font-family:Verdana, "sans-serif";
+
 }
 
 input, textArea, button, select{
@@ -14,6 +15,72 @@ input, textArea, button, select{
 } 
 
 main{
-  max-width:500px;
-  margin: 0 auto;
+  max-width:600px;
+  margin: 40px auto 20px auto;
 }
+
+
+section h2{
+  margin:20px auto;
+  text-align:center;
+  color:#444;
+}
+
+section form, article{
+  padding:10px;
+  margin:0 auto;
+  width:80%;
+  display:flex;
+  justify-items:center;
+  flex-direction:column;
+}
+
+section form label{
+  font-weight:bold;
+  margin-bottom:5px;
+  margin-left:10px;
+  border-bottom:2px solid #444;
+  width:max-content;
+  padding:5px 0;
+}
+
+section form input, select, textarea{
+  max-width:100%;
+  padding:5px;
+  margin:10px;
+}
+
+section textarea{
+  resize:none;
+  height:200px;
+  border:4px ridge lightgray;
+}
+
+
+section textarea.active,  textarea:focus, input:focus, select:focus{
+  outline-color:yellowgreen;
+  outline-style:none;
+  border:4px ridge yellowgreen;
+}
+
+section button{
+  margin:10px;
+  padding:8px 4px;
+  background-color: yellowgreen;
+  color:darkblue;
+  font-weight:bold;
+  font-size:1.5rem;
+}
+
+article{
+  border:1px solid red;
+  
+}
+
+article p{
+  margin:5px 0;
+  line-height:1.3rem;
+  font-size:0.9rem;
+  font-weight:500;
+}
+
