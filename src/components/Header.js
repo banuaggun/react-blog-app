@@ -10,7 +10,7 @@ const Header = () => {
   const count = useSelector(getCount);
   return (
     <header className='header'>
-      <h1>Redux Blog App</h1>
+      <h1>React Redux Blog App</h1>
       <nav>
         <ul>
           <li>
