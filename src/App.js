@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
+import About from './components/About';
 import Layout from './components/Layout';
 import AddPostForm from './features/posts/AddPostForm';
 import EditPostForm from './features/posts/EditPostForm';
@@ -15,6 +16,8 @@ function App() {
 
       <Route path="/" element={<Layout />}>
 
+        <Route path="about" element={<About/>} />
+        
         <Route index element={<PostsList />} />
 
         <Route path="post">

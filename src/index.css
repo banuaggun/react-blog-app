@@ -6,14 +6,28 @@
 
 body{
   min-height:100vh;
-  font-family:Verdana, "sans-serif";
+  overflow-x:hidden;
+ 
+  /*
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Montserrat', sans-serif;
+  */
 
+}
+
+ul li{
+  list-style:none;
+}
+
+ul li a{
+  text-decoration:none;
 }
 
 input, textArea, button, select{
   margin-bottom:1em;
 } 
 
+/*
 main{
   max-width:600px;
   margin: 40px auto 20px auto;
@@ -26,7 +40,7 @@ section h2{
   color:#444;
 }
 
-section form, article{
+section form{
   padding:10px;
   margin:0 auto;
   width:80%;
@@ -72,6 +86,7 @@ section button{
   font-size:1.5rem;
 }
 
+
 article{
   border:1px solid red;
   
@@ -83,4 +98,5 @@ article p{
   font-size:0.9rem;
   font-weight:500;
 }
+*/
 

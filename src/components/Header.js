@@ -10,22 +10,24 @@ const Header = () => {
   const count = useSelector(getCount);
   return (
     <header className='header'>
-      <h1>React Redux Blog App</h1>
+      <h1>Blog App</h1>
       <nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="post">Post</Link>
+            <Link to="about">About</Link>
           </li>
           <li>
-            <Link to="user">Users</Link>
+            <Link to="user">Authors</Link>
           </li>
+          <li>
+            <Link to="post">New Post</Link>
+          </li>
+          
         </ul>
-        <button onClick = {() => dispatch(increaseCount())}>
-          {count}
-        </button>
+        
       </nav>
     </header>
   )
