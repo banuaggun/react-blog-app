@@ -1,14 +1,16 @@
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
 
+import "../assets/styles/header.css"
+
 const Header = () => {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false)
 
   return (
-    <header className='header'>
+    <header>
       
-      <Link to="/" className="brandName">
+      <Link to="/" className="brand__name">
       <h1>React Redux Blog</h1>
       </Link>
       <button className='mobileMenu'  onClick={() => {setIsNavExpanded(!isNavExpanded);}}>

@@ -1,0 +1,35 @@
+header{
+  display:flex;
+  justify-content:space-between;
+  
+  position:sticky;
+  top:0;
+  height:120px;
+  border:1px solid black;
+}
+
+.brand__name{
+  display:inline-flex;
+  align-items:center;
+  margin-left:40px;
+  border:1px solid green;
+}
+
+nav{
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-end;
+  border:1px solid purple;
+}
+
+nav ul{
+  display:inline-flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-right:40px;
+}
+
+nav ul li:nth-child(1), nav ul li:nth-child(2), nav ul li:nth-child(3){
+  border:1px solid red;
+  margin-right:20px;
+}
