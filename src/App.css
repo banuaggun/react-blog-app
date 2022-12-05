@@ -5,7 +5,7 @@ header{
   display:flex;
   justify-content:space-between;
   box-shadow:0 4px 6px rgba(142, 142, 142, 0.3);
-  background-image:linear-gradient(to left, rgba(140, 0, 0, 0.5) 25%, rgba(255, 255, 255, 0.4) 80%);
+  background-image:linear-gradient(to left, rgba(204, 39, 76, 0.8) 55%, rgba(204, 39, 76, 0.3) 72%, rgba(255, 255, 255, 0.4) 95%);
   //border:1px solid green;
 }
 
@@ -17,7 +17,7 @@ h1{
 }
 
 nav{
-  margin-right:140px;
+  margin-right:80px;
   //border:1px solid blue;
   display:flex;
   align-items:flex-end;
@@ -39,7 +39,7 @@ nav ul li{
 }
 
 nav ul li:nth-child(1), nav ul li:nth-child(2), nav ul li:nth-child(3){
-  margin-right:97px;
+  margin-right:40px;
 }
 
 nav ul li a{
@@ -51,14 +51,15 @@ nav ul li a{
   ),
   linear-gradient(
     to right,
-    darkred,
-   white,
-   red
+    rgba(46,64,84, 0.6),
+   rgba(152,162,169, 0.3),
+   rgba(204,39,76, 1)
 );
 background-size: 100% 3px, 0 3px;
 background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
+  color:#000;
 }
 
 nav ul li a:hover{
@@ -87,11 +88,23 @@ section{
   overflow-x:hidden;
 }
 
+ 
+  /*
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Montserrat', sans-serif;
+  */
+
+
 article{
-  max-width:50%;
-  width:calc(100% - 20px);
-  padding:50px;
+  margin:20px;
+  max-width:45%;
+  width:auto;
+  //width:calc(100% - 40px);
+  padding:40px;
   //border:1px solid purple;
+  border-radius:20px;
+  border:8px solid rgba(204, 39, 76, 1);
+  box-shadow:4px 4px 4px rgba(142, 142, 142, 0.5);
 }
 
 h2{

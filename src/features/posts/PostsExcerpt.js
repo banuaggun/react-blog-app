@@ -14,8 +14,9 @@ const PostsExcerpt = ({post}) => {
       <Link to={`post/${post.id}`}>View Post</Link>
       </p>
       <p className="postCredit">
-       
+       <img src={post.photos} alt="" />
         <PostAuthor userId = {post.userId} />
+        
         <TimeAgo timestamp={post.date} />
       </p>
       <ReactionButtons post={post} />

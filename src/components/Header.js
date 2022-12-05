@@ -1,23 +1,28 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import {useState} from 'react'
 import { Link } from 'react-router-dom'
-import { getCount, increaseCount } from '../features/posts/postsSlice';
 
 const Header = () => {
 
-  const dispatch = useDispatch();
+  const [isNavExpanded, setIsNavExpanded] = useState(false)
 
-  const count = useSelector(getCount);
   return (
     <header className='header'>
-      <h1>Blog App</h1>
+      
+      <Link to="/" className="brandName">
+      <h1>React Redux Blog</h1>
+      </Link>
+      <button className='mobileMenu'  onClick={() => {setIsNavExpanded(!isNavExpanded);}}>
+      |||
+      </button>
       <nav>
-        <ul>
+        <ul  className={isNavExpanded ? "navigation expanded" : "navigation"
+        }>
           <li>
             <Link to="/">Home</Link>
           </li>
+         
           <li>
-            <Link to="about">About</Link>
+            <Link to="about">Information</Link>
           </li>
           <li>
             <Link to="user">Authors</Link>

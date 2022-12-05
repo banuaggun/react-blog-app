@@ -1,102 +1,174 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  min-height:100vh;
-  overflow-x:hidden;
- 
-  /*
-  font-family: 'Bebas Neue', cursive;
-  font-family: 'Montserrat', sans-serif;
-  */
-
+html {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: white;
+  color: #000;
 }
 
-ul li{
-  list-style:none;
+body {
+  min-height: 100vh;
+  font-size: 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-ul li a{
-  text-decoration:none;
+input,
+textarea,
+button,
+select {
+  font: inherit;
+  margin-bottom: 1em;
 }
 
-input, textArea, button, select{
-  margin-bottom:1em;
-} 
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: purple;
+  align-items:flex-end;
+  color: whitesmoke;
+  position: sticky;
+  top: 0;
+}
 
-/*
-main{
-  max-width:600px;
-  margin: 40px auto 20px auto;
+nav {
+  display: flex;
+  justify-content: flex-end;
+border:1px solid black;
+}
+
+nav ul {
+  list-style-type: none;
+  border:1px solid green;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+nav a, nav a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: underline;
+}
+
+.mobileMenu{
+  border:none;
+  height:40px;
+  width:40px;
+  padding:0.5rem;
+  border-radius:50%;
+  background-color:green;
+  cursor:pointer;
+  transition:background-color 0.2s ease-in-out;
+  position:absolute;
+  top:50%;
+  right:25px;
+  transform:translateY(-50%);
+  display:none;
+}
+
+@media screen and (max-width:768px){
+  .mobileMenu{
+    display:block;
+  }
+  header nav ul.navigation{
+    display:none;
+  }
+  header nav ul.expanded{
+    display:block;
+    position:absolute;
+    top:120px;
+    left:0;
+    flex-direction:column;
+    width:100%;
+    height:calc(100vh - 77px);
+    background-color:lightgreen;
+    border-top:1px solid black;
+  }
 }
 
 
-section h2{
-  margin:20px auto;
-  text-align:center;
-  color:#444;
+.mobileMenu:hover{
+  background-color:white;
+}
+main {
+  max-width: 500px;
+  margin: auto;
 }
 
-section form{
-  padding:10px;
-  margin:0 auto;
-  width:80%;
-  display:flex;
-  justify-items:center;
-  flex-direction:column;
+section {
+  margin-top: 1em;
 }
 
-section form label{
-  font-weight:bold;
-  margin-bottom:5px;
-  margin-left:10px;
-  border-bottom:2px solid #444;
-  width:max-content;
-  padding:5px 0;
+article {
+  margin: 0.5em;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 1em;
 }
 
-section form input, select, textarea{
-  max-width:100%;
-  padding:5px;
-  margin:10px;
+h1 {
+  font-size: 3.5rem;
 }
 
-section textarea{
-  resize:none;
-  height:200px;
-  border:4px ridge lightgray;
+h2 {
+  margin-bottom: 1rem;
 }
 
-
-section textarea.active,  textarea:focus, input:focus, select:focus{
-  outline-color:yellowgreen;
-  outline-style:none;
-  border:4px ridge yellowgreen;
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  font-size: 1.2rem;
+  margin: 0.5em 0;
 }
 
-section button{
-  margin:10px;
-  padding:8px 4px;
-  background-color: yellowgreen;
-  color:darkblue;
-  font-weight:bold;
-  font-size:1.5rem;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-
-article{
-  border:1px solid red;
-  
+textarea {
+  height: 200px;
 }
 
-article p{
-  margin:5px 0;
-  line-height:1.3rem;
-  font-size:0.9rem;
-  font-weight:500;
+.postCredit {
+  font-size: 1rem;
 }
-*/
 
+.postCredit a, 
+.postCredit a:visited {
+  margin-right: 0.5rem;
+  color: black;
+}
+
+.postCredit a:hover, 
+.postCredit a:focus {
+  color: hsla(0, 0%, 0%, 0.75);
+}
+
+.excerpt {
+  font-style: italic;
+}
+
+.reactionButton {
+  margin: 0 0.25em 0 0;
+  background: transparent;
+  border: none;
+  color: #000;
+  font-size: 1rem;
+}
+
+.deleteButton {
+  background-color: palevioletred;
+  color: white;
+}
