@@ -1,11 +1,13 @@
 header{
   display:flex;
   justify-content:space-between;
-  
+  font-family: 'Bebas Neue', cursive;
   position:sticky;
   top:0;
-  height:120px;
+  height:100px;
+  color:#000;
   border:1px solid black;
+
 }
 
 .brand__name{
@@ -26,10 +28,88 @@ nav ul{
   display:inline-flex;
   justify-content:space-between;
   align-items:flex-end;
-  margin-right:40px;
+  margin-right:80px;
+}
+
+nav ul li{
+  font-size:1.5rem;
+  line-height:auto;
 }
 
 nav ul li:nth-child(1), nav ul li:nth-child(2), nav ul li:nth-child(3){
   border:1px solid red;
   margin-right:20px;
+}
+
+nav ul li a{
+  background:linear-gradient(to right, transparent, transparent), linear-gradient(to right, darkred, white, darkred);
+  background-size:100% 3px, 0 3px;
+  background-position:100% 100%, 0 100%;
+  background-repeat:no-repeat;
+  transition:background-size 400ms;
+  color:#000;
+}
+
+nav ul li a:hover{
+  background-size:0 3px, 100% 3px;
+  color:darkred;
+}
+
+nav ul li .active{
+  background-size:0 3px, 100% 3px;
+  color:darkred;
+}
+
+.mobileMenu{
+  border:none;
+  height:40px;
+  width:40px;
+  padding:0.5rem;
+  border-radius:50%;
+  background-color:green;
+  cursor:pointer;
+  transition:background-color 0.2s ease-in-out;
+  position:absolute;
+  top:50%;
+  right:25px;
+  transform:translateY(-50%);
+  display:none;
+}
+
+
+
+@media screen and (max-width:768px){
+  .mobileMenu{
+    display:block;
+  }
+  header nav ul.navigation{
+    display:none;
+  }
+  header nav ul.expanded{
+    display:block;
+    position:absolute;
+    top:120px;
+    left:0;
+    flex-direction:column;
+    width:100%;
+    height:calc(100vh - 77px);
+    background-color:lightgreen;
+    border-top:1px solid black;
+  }
+}
+
+
+.topbar_menu_item{
+  border:1px solid purple;
+  padding:5px;
+  color:black;
+  font-size:1.5rem;
+}
+
+.topbar_menu_item:hover{
+  color:violet;
+}
+
+.topbar_menu_item.active{
+  color:red;
 }

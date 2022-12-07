@@ -33,7 +33,7 @@ ul li{
   list-style-type:none;
 }
 
-/*
+
 nav {
   display: flex;
   justify-content: flex-end;
@@ -51,13 +51,14 @@ nav ul li {
 }
 
 nav a, nav a:visited {
-  color: #fff;
+  color: green;
   text-decoration: none;
 }
 
 nav a:hover, nav a:focus {
   text-decoration: underline;
 }
+/*
 
 .mobileMenu{
   border:none;
@@ -100,6 +101,7 @@ nav a:hover, nav a:focus {
   background-color:white;
 }
 */
+
 main {
   max-width: 500px;
   margin: auto;

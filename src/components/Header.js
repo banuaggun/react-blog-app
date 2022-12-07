@@ -1,12 +1,25 @@
-import {useState} from 'react'
-import { Link } from 'react-router-dom'
-
+import {useState, useEffect} from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import topbarNav from '../configs/topbarNav'
 import "../assets/styles/header.css"
 
 const Header = () => {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false)
 
+  const [inactive, setInactive] = useState(false);
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const curPath = window.location.pathname.split("/")[1];
+
+    const activeItem = topbarNav.findIndex((item) => item.section === curPath);
+
+    setActiveIndex(curPath.length === 0 ? 0 : activeItem);
+  }, [location]);
   return (
     <header>
       
@@ -19,19 +32,17 @@ const Header = () => {
       <nav>
         <ul  className={isNavExpanded ? "navigation expanded" : "navigation"
         }>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-         
-          <li>
-            <Link to="about">Information</Link>
-          </li>
-          <li>
-            <Link to="user">Authors</Link>
-          </li>
-          <li>
-            <Link to="post">New Post</Link>
-          </li>
+            {topbarNav.map((nav, index) => (
+          <Link to={nav.link} key={`nav-${index}`} className={`topbar_menu_item ${activeIndex === index && "active"}`}>
+            <div className='topbar_menu_item_area'>
+              <div className='topbar_menu_item_area_list'>
+                <div className='topbar_menu_item_area_list_text'>
+                  {nav.text}
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
           
         </ul>
         
