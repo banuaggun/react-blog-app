@@ -21,7 +21,6 @@ nav{
   display:flex;
   flex-direction:row;
   justify-content:flex-end;
-  border:1px solid purple;
 }
 
 nav ul{
@@ -41,7 +40,7 @@ nav ul li:nth-child(1), nav ul li:nth-child(2), nav ul li:nth-child(3){
   margin-right:20px;
 }
 
-nav ul li a{
+.topbar_menu_item{
   background:linear-gradient(to right, transparent, transparent), linear-gradient(to right, darkred, white, darkred);
   background-size:100% 3px, 0 3px;
   background-position:100% 100%, 0 100%;
@@ -100,16 +99,33 @@ nav ul li .active{
 
 
 .topbar_menu_item{
-  border:1px solid purple;
   padding:5px;
-  color:black;
   font-size:1.5rem;
+  background:
+  linear-gradient(
+    to right,
+    transparent,
+    transparent
+  ),
+  linear-gradient(
+    to right,
+    rgba(46,64,84, 0.6),
+   rgba(152,162,169, 0.3),
+   rgba(204,39,76, 1)
+);
+background-size: 100% 3px, 0 3px;
+background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  color:#000;
 }
 
 .topbar_menu_item:hover{
-  color:violet;
+  text-decoration:none;
+  color:darkred;
+  background-size: 0 3px, 100% 3px;
 }
 
 .topbar_menu_item.active{
-  color:red;
+  color:darkred;
 }
