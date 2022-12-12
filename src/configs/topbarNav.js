@@ -8,7 +8,7 @@ const topbarNav = [
   {
     "link": "/about",
     "section": "about",
-    "text": "INFORMATION"
+    "text": "ABOUT"
   },
   {
     "link": "/user",

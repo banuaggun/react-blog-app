@@ -1,67 +1,56 @@
+:root{
+  --textColor:#000000;
+  --backgroundColor:#FFFFFF;
+  --fontBebas:'Bebas Neue', cursive;
+  --fontMontserrat:'Montserrat', sans-serif;
+  --navShadow:0 2px 4px rgba(188, 177, 133, 0.7);
+  --activeLinkBg:#45333F;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
 
 html {
-  background-color: white;
-  color: #000;
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
 }
 
 body {
   min-height: 100vh;
-  //font-size: 1.5rem;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  //-webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
 }
 
-input,
-textarea,
-button,
-select {
-  //font: inherit;
-  margin-bottom: 1em;
-}
 
 a{
   text-decoration:none;
-  color:#000;
+  color:var(--textColor);
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family:var(--fontBebas);
 }
 
 p{
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--fontMontserrat);
+  font-style:italic;
 }
 
 ul li{
   list-style-type:none;
 }
 
-
-nav {
-  display: flex;
-  justify-content: flex-end;
-border:1px solid black;
-
+a, a:hover, a:visted, a:focus, active{
+  text-decoration:none;
 }
 
-nav ul {
-  list-style-type: none;
-  border:1px solid green;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-nav a, nav a:visited, nav a:hover {
-  text-decoration: none;
-}
-
-nav a:hover, nav a:focus {
-  text-decoration: none;
-}
 /*
 
 .mobileMenu{

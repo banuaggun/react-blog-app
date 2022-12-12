@@ -24,9 +24,9 @@ const Header = () => {
     <header>
       
       <Link to="/" className="brand__name">
-      <h1>React Redux Blog</h1>
+        <span>BLOG APP</span>
       </Link>
-      <button className='mobileMenu'  onClick={() => {setIsNavExpanded(!isNavExpanded);}}>
+      <button className='mobile__menu'  onClick={() => {setIsNavExpanded(!isNavExpanded);}}>
         <svg
           xmlns="http://www.w3.org/2000/svg" 
           width="16" 
@@ -39,21 +39,18 @@ const Header = () => {
         </svg>
       </button>
       <nav>
-        <ul  className={isNavExpanded ? "navigation expanded" : "navigation"
+        <div  className={isNavExpanded ? "navigation expanded" : "navigation"
         }>
             {topbarNav.map((nav, index) => (
-          <Link to={nav.link} key={`nav-${index}`} className={`topbar_menu_item ${activeIndex === index && "active"}`}>
-            <div className='topbar_menu_item_area'>
-              <div className='topbar_menu_item_area_list'>
-                <div className='topbar_menu_item_area_list_text'>
+          <Link to={nav.link} key={`nav-${index}`} className={`topbar__menu__item ${activeIndex === index && "active"}`}>
+             <span className='topbar__menu__item__area'>
                   {nav.text}
-                </div>
-              </div>
-            </div>
+                </span>
+            
           </Link>
         ))}
           
-        </ul>
+        </div>
         
       </nav>
     </header>

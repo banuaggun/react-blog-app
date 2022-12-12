@@ -1,131 +1,58 @@
 header{
   display:flex;
   justify-content:space-between;
-  font-family: 'Bebas Neue', cursive;
   position:sticky;
   top:0;
   height:100px;
-  color:#000;
-  border:1px solid black;
-
+  box-shadow:var(--navShadow);
+  font-family:var(--fontBebas);
 }
 
 .brand__name{
   display:inline-flex;
   align-items:center;
-  margin-left:40px;
-  border:1px solid green;
+  margin-left:100px;
+  font-size:45px;
+  font-weight:900;
 }
 
 nav{
-  display:flex;
-  flex-direction:row;
-  justify-content:flex-end;
+  display:inline-flex;
+  align-items:flex-end;
+  margin-right:100px;
 }
-
-nav ul{
+nav .navigation{
   display:inline-flex;
   justify-content:space-between;
   align-items:flex-end;
   margin-right:80px;
 }
 
-nav ul li{
-  font-size:1.5rem;
-  line-height:auto;
+.topbar__menu__item{
+  //border:1px solid purple;
+  width:90px;
+  height:44px;
+  border-radius:4px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-nav ul li:nth-child(1), nav ul li:nth-child(2), nav ul li:nth-child(3){
-  border:1px solid red;
-  margin-right:20px;
+.topbar__menu__item:nth-child(1), .topbar__menu__item:nth-child(2), .topbar__menu__item:nth-child(3){
+  margin-right:10px;
+
 }
 
-.topbar_menu_item{
-  background:linear-gradient(to right, transparent, transparent), linear-gradient(to right, darkred, white, darkred);
-  background-size:100% 3px, 0 3px;
-  background-position:100% 100%, 0 100%;
-  background-repeat:no-repeat;
-  transition:background-size 400ms;
-  color:#000;
+.topbar__menu__item__area{
+  font-size:20px;
 }
 
-nav ul li a:hover{
-  background-size:0 3px, 100% 3px;
-  color:darkred;
+.topbar__menu__item.active{
+  color:var(--backgroundColor);
+  background-color:var(--activeLinkBg);
 }
 
-nav ul li .active{
-  background-size:0 3px, 100% 3px;
-  color:darkred;
-}
 
-.mobileMenu{
-  border:none;
-  height:40px;
-  width:40px;
-  padding:0.5rem;
-  border-radius:50%;
-  background-color:green;
-  cursor:pointer;
-  transition:background-color 0.2s ease-in-out;
-  position:absolute;
-  top:50%;
-  right:25px;
-  transform:translateY(-50%);
+.mobile__menu{
   display:none;
-}
-
-
-
-@media screen and (max-width:768px){
-  .mobileMenu{
-    display:block;
-  }
-  header nav ul.navigation{
-    display:none;
-  }
-  header nav ul.expanded{
-    display:block;
-    position:absolute;
-    top:120px;
-    left:0;
-    flex-direction:column;
-    width:100%;
-    height:calc(100vh - 77px);
-    background-color:lightgreen;
-    border-top:1px solid black;
-  }
-}
-
-
-.topbar_menu_item{
-  padding:5px;
-  font-size:1.5rem;
-  background:
-  linear-gradient(
-    to right,
-    transparent,
-    transparent
-  ),
-  linear-gradient(
-    to right,
-    rgba(46,64,84, 0.6),
-   rgba(152,162,169, 0.3),
-   rgba(204,39,76, 1)
-);
-background-size: 100% 3px, 0 3px;
-background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms;
-  color:#000;
-}
-
-.topbar_menu_item:hover{
-  text-decoration:none;
-  color:darkred;
-  background-size: 0 3px, 100% 3px;
-}
-
-.topbar_menu_item.active{
-  color:darkred;
 }
