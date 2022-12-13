@@ -4,7 +4,9 @@
   --fontBebas:'Bebas Neue', cursive;
   --fontMontserrat:'Montserrat', sans-serif;
   --navShadow:0 2px 4px rgba(188, 177, 133, 0.7);
-  --activeLinkBg:#45333F;
+  --buttonBg:#A80726;
+  --grayBg:#85848A;
+  --lightGrayBg:#BCB1B7;
 }
 
 * {

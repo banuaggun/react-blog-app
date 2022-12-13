@@ -32,12 +32,30 @@ nav .navigation{
   //border:1px solid purple;
   width:90px;
   height:44px;
-  border-radius:4px;
+  border-radius:2px;
   display:flex;
   align-items:center;
   justify-content:center;
+  transition:all 400ms;
+
+  background:
+  linear-gradient(
+    to right,
+    transparent,
+    transparent
+  ),
+  linear-gradient(
+    to right,
+    var(--lightGrayBg),
+   var(--buttonBg),
+   var(--lightGrayBg)
+);
+background-size: 100% 3px, 0 3px;
+background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
 }
 
+.topbar__menu__item:nth-child(0),
 .topbar__menu__item:nth-child(1), .topbar__menu__item:nth-child(2), .topbar__menu__item:nth-child(3){
   margin-right:10px;
 
@@ -47,12 +65,20 @@ nav .navigation{
   font-size:20px;
 }
 
+.topbar__menu__item:hover{
+  text-decoration:none;
+  color:var(--buttonBg);
+  background-size: 0 3px, 100% 3px;
+}
+
 .topbar__menu__item.active{
   color:var(--backgroundColor);
-  background-color:var(--activeLinkBg);
+  
+  background-color:var(--buttonBg);
 }
 
 
 .mobile__menu{
   display:none;
 }
+
