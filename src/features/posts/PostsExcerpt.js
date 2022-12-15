@@ -9,9 +9,11 @@ import TimeAgo from "./TimeAgo";
 const PostsExcerpt = ({post}) => {
   return (
     <article>
-      <h2>{post.title}</h2>
+      <div className='post__text'>
+        <div className='post__text__area'>
+      <span className='post__text__area__title'>{post.title}</span>
       <p className='excerpt'>{post.body.substring(0, 75)}...
-      <Link to={`post/${post.id}`}>View Post</Link>
+      
       </p>
       <p className="postCredit">
        <img src={post.photos} alt="" />
@@ -19,7 +21,12 @@ const PostsExcerpt = ({post}) => {
         
         <TimeAgo timestamp={post.date} />
       </p>
+      </div>
+      </div>
+      <div className='post__buttons'>
+      <Link to={`post/${post.id}`}>View Post</Link>
       <ReactionButtons post={post} />
+      </div>
     </article>
   )
 }

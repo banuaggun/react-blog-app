@@ -4,6 +4,7 @@
   --fontBebas:'Bebas Neue';
   --fontMontserrat:'Montserrat', sans-serif;
   --navShadow:0 2px 4px rgba(188, 177, 133, 0.7);
+  --postShadow:0 -2px 2px rgba(69, 51, 63, 0.4);
   --buttonBg:#A80726;
   --grayBg:#85848A;
   --lightGrayBg:#BCB1B7;
@@ -55,64 +56,52 @@ a, a:hover, a:visted, a:focus, active{
   text-decoration:none;
 }
 
-/*
-
-.mobileMenu{
-  border:none;
-  height:40px;
-  width:40px;
-  padding:0.5rem;
-  border-radius:50%;
-  background-color:green;
-  cursor:pointer;
-  transition:background-color 0.2s ease-in-out;
-  position:absolute;
-  top:50%;
-  right:25px;
-  transform:translateY(-50%);
-  display:none;
-}
-
-@media screen and (max-width:768px){
-  .mobileMenu{
-    display:block;
-  }
-  header nav ul.navigation{
-    display:none;
-  }
-  header nav ul.expanded{
-    display:block;
-    position:absolute;
-    top:120px;
-    left:0;
-    flex-direction:column;
-    width:100%;
-    height:calc(100vh - 77px);
-    background-color:lightgreen;
-    border-top:1px solid black;
-  }
-}
-
-
-.mobileMenu:hover{
-  background-color:white;
-}
-*/
 
 main {
-  max-width: 500px;
-  margin: auto;
+  width:calc(100% - 200px);
+  height:auto;
+  margin: 0 100px;
 }
 
 section {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
   margin-top: 1em;
+  border:1px solid green;
 }
 
 article {
+  width:calc(100% - 60%);
   margin: 0.5em;
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 1em;
+  background-color:var(--grayBg);
+  border-radius: 60px 60px 20px 20px;
+  z-index:-1;
+}
+
+article .post__text{
+  z-index:10;
+  background-color:white;
+  border-width:0 2px 0 2px;
+  border-color:var(--lightGrayBg);
+  border-style:solid;
+  box-shadow:var(--postShadow);
+  border-radius: 60px 60px 20px 20px;
+}
+article .post__text__area{
+  padding:52px 37px 54px 52px;
+}
+article .post__text .post__text__area__title{
+  font-family:var(--fontBebas);
+  font-size:22px;
+  font-weight:900;
+
+}
+article .post__buttons{
+  width:100%;
+  height:95px;
+  margin-top:-45px;
+
 }
 
 
@@ -137,6 +126,7 @@ textarea {
   font-size: 1rem;
 }
 
+/*
 .postCredit a, 
 .postCredit a:visited {
   margin-right: 0.5rem;
@@ -160,7 +150,14 @@ textarea {
   font-size: 1rem;
 }
 
+*/
 .deleteButton {
   background-color: palevioletred;
   color: white;
 }
+
+
+/*
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Montserrat', sans-serif;
+  */
