@@ -138,15 +138,13 @@ nav .expanded .topbar__menu__item:nth-child(3){
   nav .navigation{
     display:none;
   }
-}
-
-@media screen and (max-width:769px){
   .mobile__menu{
     display:flex;
     justify-content:center;
     align-items:center;
   }
 }
+
 
 @media screen and (min-width:500px) and (max-width:769px){
   .brand__name{

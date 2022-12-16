@@ -1,5 +1,7 @@
 :root{
   --textColor:#000000;
+  --textColor2:rgba(0, 0, 0, 0.87);
+  --textColor3:rgba(0, 0, 0, 0.7);
   --backgroundColor:#FFFFFF;
   --fontBebas:'Bebas Neue';
   --fontMontserrat:'Montserrat', sans-serif;
@@ -73,35 +75,69 @@ section {
 
 article {
   width:calc(100% - 60%);
-  margin: 0.5em;
+  height:321px;
   background-color:var(--grayBg);
   border-radius: 60px 60px 20px 20px;
-  z-index:-1;
 }
 
-article .post__text{
-  z-index:10;
+article .post__area{
   background-color:white;
+  width:100%;
+  height:255px;
+  padding:52px 37px 54px 27px;
   border-width:0 2px 0 2px;
   border-color:var(--lightGrayBg);
   border-style:solid;
   box-shadow:var(--postShadow);
   border-radius: 60px 60px 20px 20px;
 }
-article .post__text__area{
-  padding:52px 37px 54px 52px;
-}
-article .post__text .post__text__area__title{
-  font-family:var(--fontBebas);
-  font-size:22px;
-  font-weight:900;
 
+article  .post__area__text__title{
+  font-size:22px;
+  margin-bottom:4px;
+  height:52px;
+  width:100%;
+  text-shadow:none;
+  border:1px solid green;
+  font-family:var(--fontBebas);
+  color:var(--textColor2);
+}
+
+article .post__area__body{
+  font-size:16px;
+  font-style:italic;
+  color:var(--textColor2);
+  width:100%;
+  font-family:var(--fontMontserrat);
+  line-height:28px;
+  border:1px solid red;
+  margin-bottom:15px;
+}
+
+article .post__area__body::first-letter{
+  text-transform:capitalize;
+}
+
+article .post__area__end{
+  font-size:14px;
+  font-family:var(--fontMontserrat);
+  font-style:italic;
+  display:flex;
+  justify-content:space-between;
+  align-items:stretch;
+  color:var(--textColor3);
+  padding:0;
+}
+
+article .post__area__end .time{
+  font-weight:500;
+}
+article .post__area__end .author{
+  font-weight:800;
 }
 article .post__buttons{
   width:100%;
-  height:95px;
-  margin-top:-45px;
-
+  height:69px;
 }
 
 
@@ -122,35 +158,8 @@ textarea {
   height: 200px;
 }
 
-.postCredit {
-  font-size: 1rem;
-}
 
-/*
-.postCredit a, 
-.postCredit a:visited {
-  margin-right: 0.5rem;
-  color: black;
-}
 
-.postCredit a:hover, 
-.postCredit a:focus {
-  color: hsla(0, 0%, 0%, 0.75);
-}
-
-.excerpt {
-  font-style: italic;
-}
-
-.reactionButton {
-  margin: 0 0.25em 0 0;
-  background: transparent;
-  border: none;
-  color: #000;
-  font-size: 1rem;
-}
-
-*/
 .deleteButton {
   background-color: palevioletred;
   color: white;

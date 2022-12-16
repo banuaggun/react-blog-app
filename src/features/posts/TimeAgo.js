@@ -11,7 +11,7 @@ const TimeAgo = ({timestamp}) => {
     timeAgo = `${timePeriod} ago`
   }
   return (
-    <span title={timestamp}>
+    <span title={timestamp} className="time">
       &nbsp; <i>{timeAgo}</i>
     </span>
   )
