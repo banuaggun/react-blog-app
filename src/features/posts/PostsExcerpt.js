@@ -17,7 +17,7 @@ const PostsExcerpt = ({ post }) => {
           </div>
           <div className="post__area__body">
             <span className="excerpt">
-              {post.body.substring(0, 75)}...
+              {post.body.substring(0, 65)}...
             </span>
           </div>
           <div className="post__area__end">
@@ -29,8 +29,14 @@ const PostsExcerpt = ({ post }) => {
           </div>
         </div>
         <div className="post__buttons">
-          <Link to={`post/${post.id}`}>View Post</Link>
-          <ReactionButtons post={post} />
+          <div className="post__buttons__reactions">
+            <ReactionButtons post={post} />
+          </div>
+          <div className="post__buttons__view">
+            <Link to={`post/${post.id}`}>View Post</Link>
+          </div>
+          
+          
         </div>
       </article>
     );
