@@ -130,7 +130,7 @@ nav .expanded .topbar__menu__item:nth-child(3){
   }
   nav{
     margin-right:60px;
-    border:1px solid black;
+    //border:1px solid black;
   }
 }
 
