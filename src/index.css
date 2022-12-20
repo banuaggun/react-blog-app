@@ -118,7 +118,7 @@ article .post__area__body{
 }
 
 article .post__area__body::first-letter{
-  text-transform:capitalize;
+  text-transform:capitalize !important;
 }
 
 article .post__area__end{
@@ -212,31 +212,6 @@ textarea {
 }
 
 
-@media screen and (min-width:800px) and (max-width:1025px){
-  main{
-    width:calc(100% - 100px);
-    margin:0 50px;
-    //border:1px solid purple;
-  }
-  article{
-    //border:1px solid green;
-    width:calc(100% - 55%);
-  }
-  article .post__area__body{
-    height:40px;
-    line-height:20px;
-    margin-bottom:10px;
-    //border:1px solid violet;
-    //padding:40px 20px 30px 20px;
-  }
-  article .post__area__text__title{
-    font-size:18px;
-    margin-bottom:0;
-  }
-  article .post__buttons{
-    //padding:10px 20px 10px 20px;
-  }
-}
 
 /*
   font-family: 'Bebas Neue', cursive;

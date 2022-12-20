@@ -1,0 +1,71 @@
+
+@media screen and (min-width:1100px) and (max-width:1300px){
+  main{
+    width:calc(100% - 200px);
+    margin:0 100px;
+    //border:1px solid purple;
+  }
+  article{
+    //border:1px solid green;
+    width:calc(100% - 70%);
+  }
+  article .post__area{
+    padding:30px 25px 20px 25px;
+  }
+  article .post__area__text__title{
+    font-size:16px;
+    height:45px;
+    margin-bottom:0;
+    //border:1px solid green;
+  }
+  article .post__area__body{
+    //overflow: hidden;
+    letter-spacing:-0.5px;
+    height:45px;
+    line-height:24px;
+    margin-bottom:10px;
+    //border:1px solid violet;
+    //padding:20px 20px 10px 10px;
+  }
+  
+  article .post__buttons{
+    //padding:10px 20px 10px 20px;
+  }
+}
+
+@media screen and (min-width:920px) and (max-width:1099px){
+  main{
+    width:calc(100% - 50px);
+    margin:0 25px;
+    //border:1px solid purple;
+  } 
+  article .post__area{
+    padding:30px 25px 30px 25px;
+  }
+  article .post__area__text__title{
+    font-size:16px;
+    height:40px;
+    margin-bottom:4px;
+    //border:1px solid green;
+  }
+  article .post__area__body{
+    //overflow: hidden;
+    
+    letter-spacing:-0.6px;
+    height:45px;
+    line-height:24px;
+    margin-bottom:10px;
+    border:1px solid violet;
+    //padding:20px 20px 10px 10px;
+  }
+  article .post__buttons{
+    padding:17px 2px 17px 15px;
+  }
+  article .post__buttons__view{
+    width:90px;
+    height:48px;
+  }
+  article .post__buttons__view a{
+    font-size:14px;
+  }
+}
