@@ -112,9 +112,9 @@ article .post__area__body{
   width:100%;
   height:56px;
   font-family:var(--fontMontserrat);
-  line-height:28px;
+  line-height:24px;
   //border:1px solid red;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
 article .post__area__body::first-letter{
