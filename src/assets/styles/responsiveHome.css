@@ -1,3 +1,28 @@
+@media screen and (min-width:335px) and (max-width:400px){
+  main{
+    width:calc(100% - 80px);
+    margin:15px 40px;
+    border:1px solid green;
+  }
+}
+
+@media screen and (min-width:401px) and (max-width:470px){
+  main{
+    width:calc(100% - 100px);
+    margin:15px 50px;
+    border:1px solid blue;
+  }
+}
+
+@media screen and (min-width:471px) and (max-width:500px){
+  main{
+    width:calc(100% - 140px);
+    margin:15px 70px;
+    border:1px solid violet;
+  }
+}
+
+/*
 @media screen and (min-width:1100px) and (max-width:1300px){
   main{
     width:calc(100% - 200px);
@@ -86,7 +111,7 @@
  }
 }
 
-@media screen and (min-width:600px) and (max-width:779px){
+@media screen and (min-width:650px) and (max-width:779px){
   main{
     width:calc(100% - 50px);
     margin:0 25px;
@@ -103,4 +128,59 @@
   article .post__area__body{
     letter-spacing:-0.5px;
   }
+  article .reaction__button__icon{
+    font-size:18px;
+  }
 }
+
+@media screen and (min-width:400px) and (max-width:649px){
+  main{
+    width:calc(100% - 50px);
+    margin:0 25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    flex-wrap:no-wrap;
+  }
+  article{
+    width:calc(100% - 45%);
+    border:1px solid red;
+  }
+  article .post__area__text__title{
+    font-size:16px;
+    border:1px solid blue;
+    letter-spacing:-0.3px;
+    height:45px;
+  }
+  article .post__area__body{
+    font-size:12px;
+    height:40px;
+    border:1px solid pink;
+    line-height:20px;
+    letter-spacing:-0.3px;
+  }
+  article .post__area__end{
+    font-size:10px;
+  }
+  article .post__buttons{
+    padding:10px 15px 10px 15px;
+  }
+  article .post__buttons__view{
+    width:80px;
+    height:44px;
+  }
+  article .post__buttons__view a{
+    font-size:12px;
+  }
+  article .reaction__button{
+    //padding:0;
+    border:1px solid purple;
+  }
+  article .reaction__button__icon{
+    font-size:16px;
+    border:1px solid green;
+  }
+}
+
+*/
