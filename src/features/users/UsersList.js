@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import { selectAllUsers } from './usersSlice'
-
+import '../../assets/styles/users.css'
 const UsersList = () => {
 
   const users = useSelector(selectAllUsers);
@@ -15,8 +15,11 @@ const UsersList = () => {
   ))
   return (
     <section>
-      <h2>Users</h2>
-      <ul>{renderedUsers}</ul>
+      <div className='users__page'>
+      <span>Authors</span>
+      <ul className='users__page__list'> {renderedUsers}</ul>
+      </div>
+      
     </section>
   )
 }
