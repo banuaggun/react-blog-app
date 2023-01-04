@@ -10,6 +10,7 @@ const PostsExcerpt = ({ post }) => {
     return (
       <article>
         <div className="post__area">
+          <div className="post__area__inner">
           <div className="post__area__text__title">
             <span>
               {post.title}
@@ -26,6 +27,7 @@ const PostsExcerpt = ({ post }) => {
 
             <PostAuthor userId={post.userId} />
         
+          </div>
           </div>
         </div>
         <div className="post__buttons">

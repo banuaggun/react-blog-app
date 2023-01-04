@@ -65,14 +65,18 @@ article{
   border-width:0 1px;
   border-style:solid;
   border-color:var(--grayBg);
-  padding:35px 25px 20px 25px;
+  //padding:35px 25px 20px 25px;
   border-radius:60px 60px 20px 20px;
   background-color:var(--backgroundColor);
 }
 
+.post__area__inner{
+  margin:35px 15px 20px 15px;
+}
+
 .post__area__text__title{
   font-size:16px;
-  //border:1px solid green;
+  border:1px solid green;
   font-family:var(--fontBebas);
   height:35px;
   margin-bottom:4px;
@@ -84,7 +88,8 @@ article{
   font-family:var(--fontMontserrat);
   line-height:20px;
   margin-bottom:8px;
-  //border:1px solid blue;
+  height:40px;
+  border:1px solid blue;
 }
 
 .post__area__body::first-letter{
@@ -98,7 +103,7 @@ article{
   display:flex;
   justify-content:space-between;
   color:var(--textColor3);
-  //border:1px solid blue;
+  border:1px solid blue;
 }
 
 .time{
@@ -114,7 +119,7 @@ article{
   display:flex;
   flex-direction:column;
   align-items:center;
-  padding:10px;
+  margin:10px;
 }
 
 .post__buttons__reactions{
@@ -131,7 +136,7 @@ article{
   border:none;
   background-color:transparent;
   //border:1px solid red;
-  padding:5px 15px;
+  margin:5px 0px;
 
 }
 
