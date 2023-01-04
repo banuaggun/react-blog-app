@@ -1,0 +1,115 @@
+.add__post__form{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  height:auto;
+}
+
+.add__post__form span{
+  font-size:42px;
+  font-weight:900;
+  font-family:var(--fontBebas);
+  margin:15px 0 0 0;
+}
+
+.add__post__form form{
+  display:flex;
+  flex-direction:column;
+  margin:20px auto;
+  width:100%;
+  border:1px solid green;
+}
+
+.add__post__form form label{
+  padding:10px 0;
+  margin:5px 0;
+  border:1px solid violet;
+  font-size:14px;
+  font-weight:700;
+  font-family:var(--fontMontserrat);
+}
+
+.add__post__form form input{
+  width:100%;
+  height:34px;
+  //border-radius:8px;
+  margin:10px 0;
+  //border:1px solid red;
+}
+
+.add__post__form form input{
+  background-color:white;
+  border-radius:4px;
+  border:2px solid var(--lightGrayBg); 
+}
+
+.add__post__form form input[type=text]{
+  padding-left:5px;
+}
+
+.add__post__form form input:focus{
+  border:2px solid var(--lightGrayBg);
+  box-shadow:var(--navShadow);
+  outline:0;
+}
+
+.add__post__form form select{
+  width:100%;
+  height:44px;
+  border:2px solid var(--lightGrayBg);
+  transform:transition all 0.8s ease;
+}
+
+.add__post__form form select:focus, 
+.add__post__form form select options:focus{
+  border:2px solid var(--lightGrayBg);
+  box-shadow:var(--navShadow);
+  outline:0;
+}
+
+.add__post__form form select#postAuthor{
+  color:var(--textColor2);
+  font-size:14px;
+  font-family:var(--fontMontserrat);
+  font-weight:500;
+  padding:5px;
+}
+
+.add__post__form form textarea{
+  width:100%;
+  padding:10px;
+  font-size:14px;
+  color:var(--textColor2);
+  font-family:var(--fontMontserrat);
+  border:2px solid var(--lightGrayBg);
+}
+
+.add__post__form form textarea:focus{
+  border:2px solid var(--lightGrayBg);
+  box-shadow:var(--navShadow);
+  outline:0;
+}
+
+.add__post__form form button{
+  background-color:var(--buttonBg);
+  width:100%;
+  height:44px;
+  margin:20px auto;
+  border-radius:2px;
+}
+
+.add__post__form form button span{
+  color:var(--backgroundColor);
+  font-size:16px;
+  font-family:var(--fontMontserrat);
+  font-weight:700;
+}
+
+@media screen and (max-width:700px){
+  .add__post__form span{
+    font-size:38px;
+  }
+  .add__post__form form{
+    font-size:14px;
+  }
+}
