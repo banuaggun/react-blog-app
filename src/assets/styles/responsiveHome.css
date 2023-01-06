@@ -52,9 +52,6 @@
  article{
    width:calc(100% - 52%);
  }
- .post__area{
-   padding:40px 15px 25px 15px;
- }
 }
 
 @media screen and (min-width:646px) and (max-width:780px){
@@ -71,9 +68,6 @@
   article{
     width:calc(100% - 55%);
     margin:20px 0;
-  }
-  .post__area{
-    padding:40px 20px 30px 20px;
   }
   .post__area__text__title{
     height:40px;
@@ -95,9 +89,6 @@
     width:calc(100% - 60%);
     margin:20px 20px 20px 10px;
   }
-  .post__area{
-    padding:40px 20px 30px 20px;
-  }
   .post__area__text__title{
     height:40px;
   }
@@ -118,8 +109,9 @@
     width:calc(100% - 60%);
     margin:20px auto;
   }
-  .post__area{
-    padding:40px 20px 30px 20px;
+  .post__area__inner{
+    margin:30px 15px 15px 15px;
+    //padding:40px 20px 30px 20px;
   }
   .post__area__text__title{
     height:45px;
@@ -139,15 +131,15 @@
   }
   .post__buttons__view{
     width:calc(100% - 50%);
-    margin:10px 15px 10px 20px;
+    margin:10px 20px 10px 20px;
   }
   
 }
 
 @media screen and (min-width:1041px) and (max-width:1800px){
   main{
-    width:calc(100% - 200px);
-    margin:15px 100px;
+    width:calc(100% - 240px);
+    margin:15px 120px;
     //border:1px solid black;
   }
   section{
@@ -159,8 +151,9 @@
     width:calc(100% - 70%);
     margin:20px auto;
   }
-  .post__area{
-    padding:40px 20px 30px 20px;
+  .post__area__inner{
+    margin:30px 15px 15px 15px;
+    //padding:40px 20px 30px 20px;
   }
   .post__area__text__title{
     height:45px;
@@ -180,7 +173,7 @@
   }
   .post__buttons__view{
     width:calc(100% - 50%);
-    margin:10px 15px 10px 20px;
+    margin:10px 20px 10px 20px;
   }
   
 }
