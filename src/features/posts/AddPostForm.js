@@ -55,7 +55,16 @@ const AddPostForm = () => {
   return (
     <section>
       <div className='add__post__form'>
-        <span>Add a new post</span>
+        <div className='add__post__form__title'>
+          <span>Add a new post</span>
+          <p>
+          You can reach your readers by creating and publishing a post. 
+          </p>
+          <p>
+          <b>Note:</b> <i>The button becomes active when all fields of the form are filled.</i>
+          </p>
+        </div>
+        
         <form>
           <label htmlFor='postTitle'>Post Title:</label>
           <input type="text" id='postTitle' name='postTitle' value={title} onChange={onTitleChanged} />
@@ -70,7 +79,7 @@ const AddPostForm = () => {
           <textarea id='postContent' rows="12" name='postContent' value={content} onChange={onContentChanged} />
 
           <button type='button' onClick={onSavePostClicked} disabled={!canSave}>
-            <span>Save Post</span>
+            <span>Publish Post</span>
           </button>
         </form>
       </div>
