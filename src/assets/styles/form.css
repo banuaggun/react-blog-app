@@ -9,12 +9,13 @@
   font-size:42px;
   font-weight:900;
   font-family:var(--fontBebas);
-  margin:25px 0 0 0;
+  margin-top:25px;
+  margin-bottom:100px;
 }
 
 .add__post__form__title p{
   font-family:var(--fontMontserrat);
-  letter-spacing:-1.2px;
+  letter-spacing:-1.1px;
   font-weight:500;
 
 }
@@ -38,26 +39,26 @@
 }
 
 .add__post__form form label{
-  padding:10px 0;
-  margin:5px 0;
   //border:1px solid violet;
   font-size:14px;
   font-weight:700;
   font-family:var(--fontMontserrat);
 }
 
-.add__post__form form input{
-  width:100%;
-  height:34px;
-  //border-radius:8px;
+.add__post__form form label,
+.add__post__form form select,
+.add__post__form form textarea{
   margin:10px 0;
-  //border:1px solid red;
 }
 
 .add__post__form form input{
+  width:100%;
+  height:34px;
+  margin:10px 0;
   background-color:white;
   border-radius:4px;
   border:2px solid var(--lightGrayBg); 
+  //border:1px solid red;
 }
 
 .add__post__form form input[type=text]{
@@ -65,7 +66,7 @@
 }
 
 .add__post__form form input:focus{
-  border:2px solid var(--lightGrayBg);
+  border:2px solid var(--grayBg);
   box-shadow:var(--navShadow);
   outline:0;
 }
@@ -79,7 +80,7 @@
 
 .add__post__form form select:focus, 
 .add__post__form form select options:focus{
-  border:2px solid var(--lightGrayBg);
+  border:2px solid var(--grayBg);
   box-shadow:var(--navShadow);
   outline:0;
 }
@@ -99,27 +100,24 @@
   color:var(--textColor2);
   font-family:var(--fontMontserrat);
   border:2px solid var(--lightGrayBg);
+  resize:none;
 }
 
 .add__post__form form textarea:focus{
-  border:2px solid var(--lightGrayBg);
+  border:2px solid var(--grayBg);
   box-shadow:var(--navShadow);
   outline:0;
+  resize:none;
 }
 
 .add__post__form form button{
-  background-color:transparent;
   width:100%;
   height:44px;
   margin:20px auto;
   border-radius:2px;
+  box-shadow:var(--navShadow);
 }
 
-.add__post__form form  button:focus{
-  background-color:red;
-  outline:0;
-  border:none;
-}
 
 .add__post__form form button span{
   color:var(--textColor);
@@ -151,37 +149,57 @@
 @media screen and (min-width:580px) and (max-width:740px){
   .add__post__form{
     width:calc(100% - 100px);
-    margin:0 50px;
+    margin:80px 50px;
+    //border:1px solid green;
   }
 }
 
 @media screen and (min-width:741px) and (max-width:870px){
   .add__post__form{
-    width:calc(100% - 120px);
-    margin:0 60px;
+    width:calc(100% - 180px);
+    margin:120px 90px;
+    //border:1px solid blue;
   }
 }
 
 @media screen and (min-width:871px) and (max-width:1200px){
   .add__post__form{
-    width:calc(100% - 160px);
-    margin:0 80px;
+    width:calc(100% - 180px);
+    margin:160px 90px;
+    //margin:10px 0;
+    //border:1px solid lightblue;
   }
 }
 
-@media screen and (min-width:1201px) and (max-width:1925px){
+@media screen and (min-width:1201px) and (max-width:1371px){
   .add__post__form{
     display:flex;
     flex-direction:row;
     align-items:center;
     //justify-content:space-between;
-    border:1px solid blue;
+    //border:1px solid blue;
+    margin:40px auto;
   }
 
   .add__post__form form{
     display:flex;
     width:50%;
-    margin: 20px 0 20px auto;
+    margin: 0px 0 20px auto;
+    justify-content:flex-end;
+  }
+}
+
+@media screen and (min-width:1370px) and (max-width:1925px){
+  .add__post__form{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin:120px auto;
+  }
+  .add__post__form form{
+    display:flex;
+    width:50%;
+    margin:0 0 20px auto;
     justify-content:flex-end;
   }
 }

@@ -39,7 +39,8 @@ const AddPostForm = () => {
         setUserId('');
         navigate('/');
       }catch (err){
-        console.error('failed to save the post', err);
+        console.log("Please Fill in the complete all areas");
+        //console.error('failed to save the post', err);
       }finally{
         setAddRequestStatus('idle');
       }
