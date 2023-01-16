@@ -1,11 +1,13 @@
-.add__post__form{
+.add__post__form,
+.edit__post__form{
   display:flex;
   flex-direction:column;
   width:100%;
   height:auto;
 }
 
-.add__post__form__title span{
+.add__post__form__title span,
+.edit__post__form__title span{
   font-size:42px;
   font-weight:900;
   font-family:var(--fontBebas);
@@ -13,14 +15,16 @@
   margin-bottom:100px;
 }
 
-.add__post__form__title p{
+.add__post__form__title p,
+.edit__post__form__title p{
   font-family:var(--fontMontserrat);
   letter-spacing:-1.1px;
   font-weight:500;
 
 }
 
-.add__post__form__title p:nth-child(2){
+.add__post__form__title p:nth-child(2),
+.edit__post__form__title p:nth-child(2){
   font-size:16px;
 }
 
@@ -30,7 +34,8 @@
   color:var(--textColor3);
 }
 
-.add__post__form form{
+.add__post__form form,
+.edit__post__form form{
   display:flex;
   flex-direction:column;
   margin:10px auto;
@@ -38,7 +43,8 @@
   //border:1px solid green;
 }
 
-.add__post__form form label{
+.add__post__form form label,
+.edit__post__form form label{
   //border:1px solid violet;
   font-size:14px;
   font-weight:700;
@@ -47,11 +53,15 @@
 
 .add__post__form form label,
 .add__post__form form select,
-.add__post__form form textarea{
+.add__post__form form textarea,
+.edit__post__form form label,
+.edit__post__form form select,
+.edit__post__form form textarea{
   margin:10px 0;
 }
 
-.add__post__form form input{
+.add__post__form form input,
+.edit__post__form form input{
   width:100%;
   height:34px;
   margin:10px 0;
@@ -61,17 +71,20 @@
   //border:1px solid red;
 }
 
-.add__post__form form input[type=text]{
+.add__post__form form input[type=text],
+.edit__post__form form input[type=text]{
   padding-left:5px;
 }
 
-.add__post__form form input:focus{
+.add__post__form form input:focus,
+.edit__post__form form input:focus{
   border:2px solid var(--grayBg);
   box-shadow:var(--navShadow);
   outline:0;
 }
 
-.add__post__form form select{
+.add__post__form form select,
+.edit__post__form form select{
   width:100%;
   height:44px;
   border:2px solid var(--lightGrayBg);
@@ -79,13 +92,16 @@
 }
 
 .add__post__form form select:focus, 
-.add__post__form form select options:focus{
+.add__post__form form select options:focus,
+.edit__post__form form select:focus,
+.edit__post__form form select options:focus{
   border:2px solid var(--grayBg);
   box-shadow:var(--navShadow);
   outline:0;
 }
 
-.add__post__form form select#postAuthor{
+.add__post__form form select#postAuthor,
+.edit__post__form form select#postAuthor{
   color:var(--textColor2);
   font-size:14px;
   font-family:var(--fontMontserrat);
@@ -93,7 +109,8 @@
   padding:5px;
 }
 
-.add__post__form form textarea{
+.add__post__form form textarea,
+.edit__post__form form textarea{
   width:100%;
   padding:10px;
   font-size:14px;
@@ -103,14 +120,16 @@
   resize:none;
 }
 
-.add__post__form form textarea:focus{
+.add__post__form form textarea:focus,
+.edit__post__form form textarea:focus{
   border:2px solid var(--grayBg);
   box-shadow:var(--navShadow);
   outline:0;
   resize:none;
 }
 
-.add__post__form form button{
+.add__post__form form button,
+.edit__post__form form button{
   width:100%;
   height:44px;
   margin:20px auto;
@@ -118,19 +137,45 @@
   box-shadow:var(--navShadow);
 }
 
+.add__post__form form button:hover,
+.edit__post__form form button:hover{
+  cursor:pointer;
+  box-shadow:var(--navShadow);
+}
 
-.add__post__form form button span{
+
+.add__post__form form button span,
+.edit__post__form form button span{
   color:var(--textColor);
   font-size:16px;
   font-family:var(--fontMontserrat);
   font-weight:700;
 }
 
+.edit__post__form button.deleteButton{
+  background-color:var(--buttonBg);
+  color:var(--backgroundColor);
+  border:none;
+  outline:none;
+}
+
+.edit__post__form button.deleteButton:hover{
+  box-shadow:var(--postShadow);
+  cursor:pointer;
+}
+
+.edit__post__form button.deleteButton:focus{
+  border:none;
+  outline:none;
+}
+
 @media screen and (max-width:700px){
-  .add__post__form__title span{
+  .add__post__form__title span,
+  .edit__post__form__title span{
     font-size:35px;
   }
-  .add__post__form__title p:nth-child(2){
+  .add__post__form__title p:nth-child(2),
+  .edit__post__form__title p:nth-child(2){
     //color:green;
     line-height:21px;
     
@@ -141,13 +186,15 @@
     line-height:19px;
     font-size:13px;
   }
-  .add__post__form form{
+  .add__post__form form,
+  .edit__post__form form{
     font-size:14px;
   }
 }
 
 @media screen and (min-width:580px) and (max-width:740px){
-  .add__post__form{
+  .add__post__form,
+  .edit__post__form{
     width:calc(100% - 100px);
     margin:80px 50px;
     //border:1px solid green;
@@ -155,7 +202,8 @@
 }
 
 @media screen and (min-width:741px) and (max-width:870px){
-  .add__post__form{
+  .add__post__form,
+  .edit__post__form{
     width:calc(100% - 180px);
     margin:120px 90px;
     //border:1px solid blue;
@@ -163,7 +211,8 @@
 }
 
 @media screen and (min-width:871px) and (max-width:1200px){
-  .add__post__form{
+  .add__post__form,
+  .edit__post__form{
     width:calc(100% - 180px);
     margin:160px 90px;
     //margin:10px 0;
@@ -172,7 +221,8 @@
 }
 
 @media screen and (min-width:1201px) and (max-width:1371px){
-  .add__post__form{
+  .add__post__form,
+  .edit__post__form{
     display:flex;
     flex-direction:row;
     align-items:center;
@@ -181,7 +231,8 @@
     margin:40px auto;
   }
 
-  .add__post__form form{
+  .add__post__form form,
+  .edit__post__form form{
     display:flex;
     width:50%;
     margin: 0px 0 20px auto;
@@ -190,13 +241,15 @@
 }
 
 @media screen and (min-width:1370px) and (max-width:1925px){
-  .add__post__form{
+  .add__post__form,
+  .edit__post__form{
     display:flex;
     flex-direction:row;
     align-items:center;
     margin:120px auto;
   }
-  .add__post__form form{
+  .add__post__form form,
+  .edit__post__form form{
     display:flex;
     width:50%;
     margin:0 0 20px auto;

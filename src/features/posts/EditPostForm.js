@@ -4,6 +4,8 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { selectAllUsers } from '../users/usersSlice';
 import { selectPostById, updatePost, deletePost } from './postsSlice';
 
+import '../../assets/styles/form.css';
+
 const EditPostForm = () => {
   const { postId } = useParams();
   const navigate = useNavigate();
@@ -75,7 +77,16 @@ const EditPostForm = () => {
 
   return (
     <section>
-      <h2>Edit Post</h2>
+      <div className='edit__post__form'>
+        <div className='edit__post__form__title'>
+          <span>Edit Post</span>
+          <p>
+            You can reach your readers by editing and publishing a post.
+          </p>
+         
+        </div>
+      
+      
       <form>
         <label htmlFor='postTitle'>Post Title:</label>
         <input 
@@ -100,22 +111,24 @@ const EditPostForm = () => {
           name='postContent' 
           value={content} 
           onChange={onContentChanged} 
+          rows="12"
         />
         <button 
           type='button' 
           onClick={onSavePostClicked} 
           disabled={!canSave}
         >
-          Save Post
+          <span>Save Post</span>
         </button>
         <button 
           type='button' 
           className='deleteButton' 
           onClick={onDeletePostClicked}
         >
-          Delete Post
+          <span>Delete Post</span>
         </button>
       </form>
+      </div>
     </section>
   )
 }
