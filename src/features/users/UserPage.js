@@ -4,6 +4,8 @@ import { Link, useParams } from 'react-router-dom'
 import { selectAllPosts, selectPostsByUser } from '../posts/postsSlice';
 import { selectUserById } from './usersSlice';
 
+import '../../assets/styles/userPage.css';
+
 const UserPage = () => {
 
   const {userId} = useParams();
@@ -27,8 +29,16 @@ const UserPage = () => {
   ))
   return (
     <section>
-      <h2>{user?.name}</h2>
-      <ol>{postTitles}</ol>
+      <div className='user__page'>
+        <div className='user__page__title'>
+          <span>{user?.name}</span>
+        </div>
+        <div className='user__page__body'>
+          <ul>{postTitles}</ul>
+        </div>
+      </div>
+      
+      
     </section>
   )
 }

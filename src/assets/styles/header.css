@@ -83,7 +83,7 @@ nav .navigation{
   cursor:pointer;
   position:absolute;
   background-color:var(--backgroundColor);
-  transition:all 0.2s ease-in-out;
+  transition:all 0.2ms ease;
   top:75px;
   transform:translateY(-50%);
   border:1px solid var(--darkBorderColor);
@@ -98,7 +98,9 @@ nav .expanded{
   background-color:var(--backgroundColor);
   border:0.5px solid var(--borderColor);
   box-shadow:var(--navShadow);
-  border-radius:8px
+  border-radius:8px;
+  transition:all 0.2ms ease;
+  
 }
 
 nav .expanded .topbar__menu__item{

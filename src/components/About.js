@@ -1,7 +1,6 @@
 import React from 'react'
 import '../assets/styles/about.css'
 
-import feather from "../assets/icons/feather2.svg"
 const About = () => {
   return (
     <div className='about__page'>
@@ -10,7 +9,7 @@ const About = () => {
       </div>
       <div className='about__page__body'>
         <p>
-        In this project, I created a blog page that I designed using Figma and coded it using ReactJs and Redux frameworks. I got the blog data from a remote source using API. I did the decoding of the design with PureCSS.
+        In this project, I created a blog page that I designed using <b>Figma</b> and coded it using <b>ReactJs</b> and <b>Redux</b> frameworks. I got the blog data from a remote source using API. I did the decoding of the design with <b>PureCSS</b>.
         </p>
       </div>
       <div className='about__page__end'>
