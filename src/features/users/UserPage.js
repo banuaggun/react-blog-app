@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom'
-import { selectAllPosts, selectPostsByUser } from '../posts/postsSlice';
+import { selectPostsByUser } from '../posts/postsSlice';
 import { selectUserById } from './usersSlice';
 
 import '../../assets/styles/userPage.css';

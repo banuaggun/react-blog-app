@@ -7,7 +7,7 @@ const Header = () => {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false)
 
-  const [inactive, setInactive] = useState(false);
+  //const [inactive, setInactive] = useState(false);
 
   const [activeIndex, setActiveIndex] = useState(0);
 
